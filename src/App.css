@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -15,7 +16,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +28,84 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main>h1 {
+  border-top: 2px solid black;
+}
+
+.loginForm,
+.passwordConfirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+
+}
+
+
+.carousel {
+  height: 34vw;
+}
+
+.carouselImg {
+  position: relative;
+  max-height: 28vw;
+  margin: 10px;
+}
+
+.thumbnails>img {
+  transition: border 0.3s ease-in-out;
+  width: 6vw;
+  height: 3vw;
+  
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.arrowLeft,
+.arrowRight {
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 26%;
+  opacity: 0.6;
+  transition: opacity ease-in-out 0.3s;
+  cursor: pointer;
+  background-size: 14%;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  opacity: 0.9;
+}
+
+.arrowLeft {
+  left: 0;
+  top: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArklEQVR4nO3Y0QqCQBRF0f2FZTGDD/bvQUEFfYKBMjAQhD537uUs8N3DVnAEs9ROwBN4A4WgRmAGln61MeFHLMCLBCNm4EwgdWPEB5gIxCNUuIQKl1DhEipcQoVLqKj+ABRRM5QYdg5F7bAUyj3DiFRDhiyPFv3/09bLfiGg4jGiisuIKi4jqriMKJdR5TKqXEZVqjLjzuHsSJIxN4L6HfMgsPY4XXuNw79vxoyvFeVU7Pycczv1AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 6% center;
+}
+
+.arrowRight {
+  right: 0;
+  top: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVR4nO3YMQoCMRRF0evyjIXyC7EQdd/CqIWFswIVRRmYQmSmsHs/vgNZwOU1ScBMyhQ4AEcgSKwBXv15AGuS2n+EpI4pwL2WmBiJ2ZBQOEZUeBlR4WVEhZcR5WVUeRlVXkbVXyyzpJKYCzAhmTlw+wpps4UMRTyBFck+L64DEVsScYQKL6HCS6jwEiq8hAovoaL4Aiii1LDEbORRtCOZUw0RnXMNEZ1F/0nQZntjm/GbN9Vi7GXiyNLGAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 94% center;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 20px 10px;
+
+  height: calc(3vw + 0.2em);
+}
+
+.pagination {
+  margin: 3vw 2vw;
 }
